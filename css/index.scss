@@ -1,0 +1,367 @@
+@mixin link {
+    display: inline-block;
+    text-decoration: none;
+    color: #4b4b4b;
+    border-bottom: solid 1px;
+    border-color: #4b4b4b;
+
+    &:hover {
+       color: black;
+       border-color: black;
+    }
+}
+
+
+
+body {
+    height: 100%;
+    font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    color: #4b4b4b;
+    background-size: cover;
+}
+
+header {
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    color: white;
+    background-color: #fcfcfc;
+    border-bottom: solid 1.5px;
+    border-color: #ababab;
+
+    .home_link {
+        float: left;
+        height: 100%;
+
+        &-btn {
+            display: inline-block;
+            text-decoration: none;
+            margin-left: 30px;
+
+            &-img {
+                display: inline-block;
+                height: 40px;
+                border-radius: 27px;
+                margin-top: 9px;
+                border: solid 1.5px;
+                border-color: #ababab;
+            }
+
+            span {
+                position: absolute;
+                top: 15px;
+                left: 80px;
+                font-size: 35px;
+                color: #c9c9c9;
+            }
+        }
+    }
+
+    .right {
+        display: inline-block;
+        float: right;
+        height: 100%;
+        margin-right: 50px;
+
+        #hamburger-icon {
+            display: none;
+        }
+
+        #close {
+            display: none;
+        }
+
+        ul {
+            height: 100%;
+
+            li {
+                display: inline-block;
+                text-align: center;
+                height: 100%;
+                width: 130px;
+
+                a {
+                    text-decoration: none;
+                    display: inline-block;
+                    color: #8f8f8f;
+                    line-height: 60px;
+                    transition: 0.3s;
+
+                    &:hover {
+                        color: #636363;
+                    }
+                }
+            }
+        }
+    }
+
+
+    @media (max-width: 700px) {
+        .home_link {
+            img {
+                display: none;
+            }
+
+            span {
+                top: 17px;
+                left: 15px;
+                font-size: 30px;
+            }
+        }
+
+        .right {
+
+            #hamburger-icon {
+                display: inline-block;
+                position: fixed;
+                right: 15px;
+                transition: 0.2s;
+
+                img {
+                    height: 50px;
+                    padding-top: 6px;
+                }
+            }
+
+            #close {
+                display: none;
+                height: 59px;
+                width: 50px;
+                z-index: 10;
+                position: fixed;
+                right: 5px;
+                margin-right: 10px;
+                transition: 0.2s;
+
+                img {
+                    position: fixed;
+                    right: 10px;
+                    height: 60px;
+                }
+            }
+
+            #menu {
+                display: none;
+                background-color: #fcfcfc;
+                position: fixed;
+                top: 61.5px;
+                right: 0px;
+                width: 100%;
+
+                ul {
+                    li {
+                        display: block;
+                        text-align: center;
+                        height: 100%;
+                        width: 100%;
+
+                        a {
+                            width: 100%;
+                            border-bottom: solid 1px;
+                            border-color: #ababab;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hello {
+    height: 100vh;
+    background-image: url("../img/top.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+@media (max-width: 700px) {
+    .hello {
+        background-image: url("../img/top_mobile.png");
+    }
+}
+
+.container {
+    padding: 150px 10%;
+    background-color: #f9f9f9;
+    line-height: 40px;
+
+    &-title {
+        text-align: center;
+        padding-bottom: 100px;
+        font-size: 45px;
+        font-weight: 100;
+        color: #7e7e7e;
+    }
+
+    &-text {
+        margin: 0 30px;
+
+        h4 {
+            font-weight: 100;
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        padding: 80px 5%;
+
+        &-title {
+            font-size: 35px;
+            padding-bottom: 80px;
+        }
+
+        &-text {
+            margin: 0 15px;
+
+            h4 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+.profile {
+    background-color: white;
+
+    h4 {
+        padding-bottom: 30px;
+    }
+
+    p {
+        padding-bottom: 50px;
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 700px) {
+    .profile {
+        p {
+            padding-left: 0;
+        }
+    }
+}
+
+.works {
+
+    .work {
+        padding-bottom: 180px;
+    }
+
+    a {
+        @include link;
+        font-size: 20px;
+        margin: 10px 30px;
+        line-height: 20px;
+    }
+
+    img {
+        display: inline-block;
+        width: 49%;
+    }
+
+    h4 {
+        padding-bottom: 40px;
+        font-size: 30px;
+    }
+
+    p {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    .works {
+        .work {
+            padding-bottom: 90px;
+        }
+
+        h4 {
+            font-size: 25px;
+            padding-bottom: 20px;
+        }
+
+        a {
+            font-size: 15px;
+        }
+    }
+}
+
+
+.daily {
+    background-color: white;
+
+    h4 {
+        padding-bottom: 30px;
+    }
+
+    p {
+        padding-bottom: 50px;
+    }
+
+    img {
+        width: 25%;
+    }
+}
+
+@media (max-width: 700px) {
+    .daily {
+        img {
+            width: 49%;
+        }
+    }
+}
+
+
+footer {
+    height: 60px;
+    background-color: #d0d0d0;
+
+    p {
+        display: inline-block;
+        float: right;
+        line-height: 60px;
+        padding-right: 30px;
+    }
+
+    a {
+        @include link;
+        padding-top: 23px;
+        margin-left: 1vw;
+    }
+
+    .most_left {
+        margin-left: 2vw;
+    }
+}
+
+@media (max-width: 700px) {
+    footer {
+        height: 120px;
+
+        p {
+            display: block;
+            line-height: 20px;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+
+        a {
+            margin-left: 2vw;
+        }
+
+        .most_left {
+            margin-left: 10px;
+        }
+    }
+}
