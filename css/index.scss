@@ -176,12 +176,12 @@ header {
     background-size: cover;
 }
 
-@media (max-width: 700px) {
-    .hello {
-        background-image: url("../img/top_mobile.png");
-        background-position: center;
-    }
-}
+// @media (max-width: 700px) {
+//     .hello {
+//         background-image: url("../img/top_mobile.png");
+//         background-position: center;
+//     }
+// }
 
 .container {
     padding: 150px 10%;
