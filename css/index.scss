@@ -333,7 +333,7 @@ header {
     
         p {
             width: 43%;
-            display: inline-block;
+            display: block;
             float: right;
         }
     }
@@ -342,14 +342,18 @@ header {
 @media (max-width: 700px) {
     .daily {
         &-one_day {
-            margin-top: 50px;
-            
+            h4 {
+                padding-bottom: 15px;
+            }
+
             img {
                 width: 49%;
             }
     
             p {
                 width: 100%;
+                padding-bottom: 20px;
+                float: none;
             }
         }
     }
