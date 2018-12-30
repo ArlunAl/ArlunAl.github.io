@@ -341,12 +341,16 @@ header {
 
 @media (max-width: 700px) {
     .daily {
-        img {
-            width: 49%;
-        }
-
-        p {
-            width: 100%;
+        &-one_day {
+            margin-top: 50px;
+            
+            img {
+                width: 49%;
+            }
+    
+            p {
+                width: 100%;
+            }
         }
     }
 }
