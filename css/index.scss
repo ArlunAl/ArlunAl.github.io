@@ -1,3 +1,18 @@
+// 画面の解像度の目安
+// 2560px x 1600px
+// 2880px x 1800pxの方がよかったかも。
+
+// iconの画像
+// 80px × 80px
+
+// worksの写真の横幅
+// 1280px
+
+// 日常の写真の横幅
+// 640px
+
+
+
 @mixin link {
     display: inline-block;
     text-decoration: none;
@@ -180,6 +195,8 @@ header {
     .hello {
         background-image: url("../img/top_mobile.png");
         background-position: center;
+        background-size: cover;
+        max-width: 100%;
     }
 }
 
@@ -281,6 +298,7 @@ header {
     }
 }
 
+
 @media (max-width: 700px) {
     .works {
         .work {
@@ -302,12 +320,22 @@ header {
 .daily {
     background-color: white;
 
-    h4 {
-        padding-bottom: 30px;
-    }
+    &-one_day {
+        margin-top: 40px;
 
-    img {
-        width: 25%;
+        h4 {
+            padding-bottom: 30px;
+        }
+    
+        img {
+            width: 25%;
+        }
+    
+        p {
+            width: 43%;
+            display: inline-block;
+            float: right;
+        }
     }
 }
 
@@ -315,6 +343,10 @@ header {
     .daily {
         img {
             width: 49%;
+        }
+
+        p {
+            width: 100%;
         }
     }
 }
