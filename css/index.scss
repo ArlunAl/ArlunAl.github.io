@@ -41,8 +41,9 @@ header {
     width: 100%;
     color: white;
     background-color: #fcfcfc;
-    border-bottom: solid 1.5px;
+    border-bottom: solid 1px;
     border-color: #ababab;
+    box-shadow: #ababab 0 0 5px;
 
     .home_link {
         float: left;
