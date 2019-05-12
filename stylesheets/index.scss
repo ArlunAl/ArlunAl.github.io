@@ -283,11 +283,11 @@ header {
 
         h4 {
             font-weight: 100;
-            font-size: 25px;
+            font-size: 22px;
         }
 
         p {
-            font-size: 20px;
+            font-size: 17px;
         }
     }
 }
@@ -344,15 +344,20 @@ header {
     }
 
     a {
-        @include link;
-        font-size: 20px;
-        margin: 10px 30px;
-        line-height: 20px;
+        transition: filter .3s;
+    }
+    a:hover {
+        filter: brightness(50%);
+        z-index: 0;
     }
 
     img {
         display: inline-block;
         width: 49%;
+    }
+    .to_be_small {
+        width: auto;
+        height: 350px;
     }
 
     h4 {
